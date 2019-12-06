@@ -13126,7 +13126,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Temario">Temario<a class="anchor-link" href="#Temario">&#182;</a></h4><p>1) Razones por las cuales es una buena idea complementar Excel con Python y Pandas</p>
 <p>2) Como leemos hojas de Excel en Python y Pandas</p>
-<p>3) Que es un Dataframe</p>
+<p>3) Que es un Dataframe?</p>
 <p>4) Creación de columnas calculadas</p>
 <p>5) Filtrado de datos</p>
 <p>6) Agrupación y sumarización de datos</p>
@@ -13184,7 +13184,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2)-Como-leemos-hojas-de-Excel-en-Python-y-Pandas">2) Como leemos hojas de Excel en Python y Pandas<a class="anchor-link" href="#2)-Como-leemos-hojas-de-Excel-en-Python-y-Pandas">&#182;</a></h3><h4 id="Pandas-es-una-de-las-mejores-librer&#237;as-de-Python-para-manipular-y-analizar-datos">Pandas es una de las mejores librer&#237;as de Python para manipular y analizar datos<a class="anchor-link" href="#Pandas-es-una-de-las-mejores-librer&#237;as-de-Python-para-manipular-y-analizar-datos">&#182;</a></h4><p>Anaconda es una de la distribuciones más fáciles de instalar y utilizar</p>
+<h3 id="2)-Como-leemos-hojas-de-Excel-en-Python-y-Pandas">2) Como leemos hojas de Excel en Python y Pandas<a class="anchor-link" href="#2)-Como-leemos-hojas-de-Excel-en-Python-y-Pandas">&#182;</a></h3><h4 id="Pandas-es-una-de-las-mejores-librer&#237;as-de-Python-para-manipular-y-analizar-datos">Pandas es una de las mejores librer&#237;as de Python para manipular y analizar datos<a class="anchor-link" href="#Pandas-es-una-de-las-mejores-librer&#237;as-de-Python-para-manipular-y-analizar-datos">&#182;</a></h4><p><a href="https://pandas.pydata.org/">https://pandas.pydata.org/</a></p>
+<p>Anaconda es una de la distribuciones de Python más fáciles de instalar y utilizar</p>
 <p><a href="https://www.anaconda.com/distribution/">https://www.anaconda.com/distribution/</a></p>
 
 </div>
@@ -13211,7 +13212,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Importamos el encabezado de las órdenes emitidas y las guardamos en el dataframe <strong>encabezado</strong></p>
+<p>Usando <strong>read_excel</strong> podemos leer hojas de Excel. Importamos el encabezado de las órdenes emitidas y las guardamos en el dataframe <strong>encabezado</strong></p>
 
 </div>
 </div>
@@ -13221,10 +13222,28 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">encabezado</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;data.xlsx&#39;</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;encabezado&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">time</span> encabezado = pd.read_excel(&#39;data.xlsx&#39;, sheet_name=&#39;encabezado&#39;)
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Wall time: 43 s
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13232,20 +13251,38 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Con <strong>read_excel</strong> podemos leer hojas de Excel. Otra opción sería leerlas de un archivo .csv con <strong>read_csv</strong>, lo cual es mucho más rápido.</p>
+<p>Otra opción sería leer los datos desde de un archivo .csv con <strong>read_csv</strong>, lo cual es mucho más rápido.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">encabezado</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;encabezado.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">time</span> encabezado = pd.read_csv(&#39;encabezado.csv&#39;, sep=&#39;\t&#39;)
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Wall time: 67.8 ms
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13260,6 +13297,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Un dataframe es una estrucura de datos de forma rectangular, con columnas y filas, similar a una hoja de planilla de cálculo.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Con <strong>head</strong> vemos los primeros registros</p>
 
 </div>
@@ -13267,10 +13312,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">encabezado</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">encabezado</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13283,7 +13328,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -13314,74 +13359,74 @@ div#notebook {
   </thead>
   <tbody>
     <tr>
-      <th>31455</th>
-      <td>75114</td>
-      <td>30/6/2014</td>
-      <td>SO75114</td>
-      <td>24704</td>
+      <th>0</th>
+      <td>43659</td>
+      <td>31/5/2011</td>
+      <td>SO43659</td>
+      <td>29825</td>
     </tr>
     <tr>
-      <th>31456</th>
-      <td>75115</td>
-      <td>30/6/2014</td>
-      <td>SO75115</td>
-      <td>26832</td>
+      <th>1</th>
+      <td>43660</td>
+      <td>31/5/2011</td>
+      <td>SO43660</td>
+      <td>29672</td>
     </tr>
     <tr>
-      <th>31457</th>
-      <td>75116</td>
-      <td>30/6/2014</td>
-      <td>SO75116</td>
-      <td>16402</td>
+      <th>2</th>
+      <td>43661</td>
+      <td>31/5/2011</td>
+      <td>SO43661</td>
+      <td>29734</td>
     </tr>
     <tr>
-      <th>31458</th>
-      <td>75117</td>
-      <td>30/6/2014</td>
-      <td>SO75117</td>
-      <td>18178</td>
+      <th>3</th>
+      <td>43662</td>
+      <td>31/5/2011</td>
+      <td>SO43662</td>
+      <td>29994</td>
     </tr>
     <tr>
-      <th>31459</th>
-      <td>75118</td>
-      <td>30/6/2014</td>
-      <td>SO75118</td>
-      <td>13671</td>
+      <th>4</th>
+      <td>43663</td>
+      <td>31/5/2011</td>
+      <td>SO43663</td>
+      <td>29565</td>
     </tr>
     <tr>
-      <th>31460</th>
-      <td>75119</td>
-      <td>30/6/2014</td>
-      <td>SO75119</td>
-      <td>11981</td>
+      <th>5</th>
+      <td>43664</td>
+      <td>31/5/2011</td>
+      <td>SO43664</td>
+      <td>29898</td>
     </tr>
     <tr>
-      <th>31461</th>
-      <td>75120</td>
-      <td>30/6/2014</td>
-      <td>SO75120</td>
-      <td>18749</td>
+      <th>6</th>
+      <td>43665</td>
+      <td>31/5/2011</td>
+      <td>SO43665</td>
+      <td>29580</td>
     </tr>
     <tr>
-      <th>31462</th>
-      <td>75121</td>
-      <td>30/6/2014</td>
-      <td>SO75121</td>
-      <td>15251</td>
+      <th>7</th>
+      <td>43666</td>
+      <td>31/5/2011</td>
+      <td>SO43666</td>
+      <td>30052</td>
     </tr>
     <tr>
-      <th>31463</th>
-      <td>75122</td>
-      <td>30/6/2014</td>
-      <td>SO75122</td>
-      <td>15868</td>
+      <th>8</th>
+      <td>43667</td>
+      <td>31/5/2011</td>
+      <td>SO43667</td>
+      <td>29974</td>
     </tr>
     <tr>
-      <th>31464</th>
-      <td>75123</td>
-      <td>30/6/2014</td>
-      <td>SO75123</td>
-      <td>18759</td>
+      <th>9</th>
+      <td>43668</td>
+      <td>31/5/2011</td>
+      <td>SO43668</td>
+      <td>29614</td>
     </tr>
   </tbody>
 </table>
@@ -13404,7 +13449,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">encabezado</span><span class="o">.</span><span class="n">shape</span>
@@ -13420,7 +13465,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -13437,7 +13482,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">encabezado</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -13484,7 +13529,7 @@ memory usage: 983.4+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;SalesOrderID&#39;</span><span class="p">,</span> <span class="s1">&#39;OrderDate&#39;</span><span class="p">,</span> <span class="s1">&#39;CustomerID&#39;</span><span class="p">]</span>
@@ -13498,7 +13543,7 @@ memory usage: 983.4+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">encabezado</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13514,7 +13559,7 @@ memory usage: 983.4+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -13594,11 +13639,10 @@ memory usage: 983.4+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">detalle</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;detalle.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="c1">#detalle = pd.read_excel(&#39;data.xlsx&#39;, sheet_name=&#39;detalle&#39;)</span>
 </pre></div>
 
     </div>
@@ -13608,7 +13652,7 @@ memory usage: 983.4+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">detalle</span><span class="o">.</span><span class="n">shape</span>
@@ -13624,7 +13668,7 @@ memory usage: 983.4+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -13641,7 +13685,7 @@ memory usage: 983.4+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">detalle</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13657,7 +13701,7 @@ memory usage: 983.4+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -13745,9 +13789,17 @@ memory usage: 983.4+ KB
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Con <strong>describe</strong> pedimos las estadísticas de resumen de las columnas numéricas.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">detalle</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -13763,7 +13815,7 @@ memory usage: 983.4+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -13888,14 +13940,15 @@ memory usage: 983.4+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Creamos la columna <strong>ItemTotal</strong>, con el importe total de cada item: PrecioUnitario * Cantidad - Descuento</p>
+<p>Creamos la columna <strong>ItemTotal</strong>, con el importe total de cada item:</p>
+<p>PrecioUnitario * Cantidad - Descuento</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">detalle</span><span class="p">[</span><span class="s1">&#39;ItemTotal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">detalle</span><span class="p">[</span><span class="s1">&#39;UnitPrice&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">detalle</span><span class="p">[</span><span class="s1">&#39;OrderQty&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">detalle</span><span class="p">[</span><span class="s1">&#39;UnitPriceDiscount&#39;</span><span class="p">])</span>
@@ -13908,7 +13961,7 @@ memory usage: 983.4+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">detalle</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13924,7 +13977,7 @@ memory usage: 983.4+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -14022,7 +14075,6 @@ memory usage: 983.4+ KB
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Verificamos que los descuentos estén bien calculados.</p>
-<p>Una forma de filtrar datos de un dataframe, es con la función <strong>query</strong></p>
 
 </div>
 </div>
@@ -14037,16 +14089,14 @@ memory usage: 983.4+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Método <strong>query</strong></li>
-</ul>
+<p>Una forma cómoda de filtrar los datos de un dataframe, es con la función <strong>query</strong></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">detalle</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;UnitPriceDiscount != 0.0&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -14062,7 +14112,7 @@ memory usage: 983.4+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -14216,7 +14266,7 @@ memory usage: 983.4+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">detalle</span><span class="p">[</span><span class="s1">&#39;UnitPriceDiscount&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
@@ -14232,7 +14282,7 @@ memory usage: 983.4+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -14257,10 +14307,10 @@ memory usage: 983.4+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">detalle</span><span class="p">[</span><span class="s1">&#39;SalesOrderID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">detalle</span><span class="p">[</span><span class="s1">&#39;ProductID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -14273,74 +14323,74 @@ memory usage: 983.4+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>51721    72
-51739    72
-53465    71
-51160    71
-47355    68
-51120    67
-57046    67
-55297    66
-47395    66
-51090    66
-46616    65
-47369    65
-51751    65
-46981    65
-58918    65
-57061    65
-51748    64
-51822    62
-53560    62
-51774    62
-53536    61
-53518    61
-71794    61
-55249    61
-69422    61
-51131    60
-47366    60
-46614    60
-69437    60
-53527    59
-         ..
-46665     1
-53126     1
-57092     1
-61314     1
-63361     1
-44874     1
-46921     1
-48968     1
-51015     1
-69438     1
-44810     1
-46857     1
-48904     1
-50951     1
-55045     1
-59139     1
-44618     1
-46793     1
-48840     1
-50887     1
-52934     1
-54981     1
-69310     1
-71357     1
-44682     1
-46729     1
-50823     1
-61058     1
-63105     1
-45078     1
-Name: SalesOrderID, Length: 31465, dtype: int64</pre>
+<pre>870    4688
+712    3382
+873    3354
+921    3095
+711    3090
+707    3083
+708    3007
+922    2376
+878    2121
+871    2025
+872    1712
+715    1635
+923    1488
+930    1396
+877    1327
+782    1252
+714    1218
+783    1177
+929    1161
+779    1094
+859    1086
+716    1076
+880    1074
+784    1059
+781    1054
+931    1044
+780    1040
+934     935
+932     926
+884     904
+       ... 
+941      71
+913      60
+890      58
+891      58
+723      52
+727      48
+839      47
+805      46
+828      46
+710      44
+733      44
+719      44
+914      43
+915      41
+887      41
+888      39
+830      33
+827      31
+946      30
+950      28
+902      20
+919      16
+903      14
+744      13
+898       9
+927       9
+911       6
+943       6
+942       5
+897       2
+Name: ProductID, Length: 266, dtype: int64</pre>
 </div>
 
 </div>
@@ -14352,9 +14402,7 @@ Name: SalesOrderID, Length: 31465, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Opción con filtro de valores con indexado booleano:</li>
-</ul>
+<p>Otra opción es con filtro de valores con indexado booleano:</p>
 <p>El primer paso es crear el índice booleano, donde Pandas va a marcar si cada fila cumple o no la condición</p>
 
 </div>
@@ -14362,7 +14410,7 @@ Name: SalesOrderID, Length: 31465, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">detalle</span><span class="p">[</span><span class="s1">&#39;SalesOrderID&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">43659</span>
@@ -14378,7 +14426,7 @@ Name: SalesOrderID, Length: 31465, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -14464,7 +14512,7 @@ Name: SalesOrderID, Length: 121317, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">orde443659</span> <span class="o">=</span> <span class="n">detalle</span><span class="p">[</span><span class="n">detalle</span><span class="p">[</span><span class="s1">&#39;SalesOrderID&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">43659</span><span class="p">]</span>
@@ -14481,7 +14529,7 @@ Name: SalesOrderID, Length: 121317, dtype: bool</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -14585,7 +14633,7 @@ Name: SalesOrderID, Length: 121317, dtype: bool</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">detalle</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;SalesOrderID&#39;</span><span class="p">)[</span><span class="s1">&#39;ItemTotal&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -14601,7 +14649,7 @@ Name: SalesOrderID, Length: 121317, dtype: bool</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[19]:</div>
+    <div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -14680,7 +14728,7 @@ Name: ItemTotal, Length: 31465, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">detalle</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;SalesOrderID&#39;</span><span class="p">)[</span><span class="s1">&#39;ItemTotal&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="nb">sum</span><span class="p">,</span> <span class="nb">max</span><span class="p">])</span>
@@ -14696,7 +14744,7 @@ Name: ItemTotal, Length: 31465, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -15046,19 +15094,6 @@ Name: ItemTotal, Length: 31465, dtype: float64</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># detalle.groupby(&#39;SalesOrderID&#39;)[&#39;ItemTotal&#39;].describe()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15072,7 +15107,6 @@ Name: ItemTotal, Length: 31465, dtype: float64</pre>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clientes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;clientes.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="c1">#clientes = pd.read_excel(&#39;data.xlsx&#39;, sheet_name=&#39;cliente&#39;)</span>
 </pre></div>
 
     </div>
@@ -15245,7 +15279,6 @@ memory usage: 309.8+ KB
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">productos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;productos.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="c1">#productos = pd.read_excel(&#39;data.xlsx&#39;, sheet_name=&#39;producto&#39;)</span>
 </pre></div>
 
     </div>
@@ -15614,7 +15647,7 @@ memory usage: 9.3+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Eliminamos el campo Id ya que no tiene valor, es un identificador de fila</p>
+<p>Eliminamos el campo <strong>SalesOrderDetailID</strong> ya que no tiene valor, es un identificador de fila</p>
 
 </div>
 </div>
@@ -16096,14 +16129,6 @@ memory usage: 9.3+ KB
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>La función de agregación por defecto es la media</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[40]:</div>
@@ -16219,7 +16244,16 @@ memory usage: 9.3+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Acá ajustamos la cantidad de columnas, el formato y la función de agregación</p>
+<p>El índice define las filas.</p>
+<p>La función de agregación por defecto es la media</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ajustamos la cantidad de columnas, el formato y la función de agregación</p>
 
 </div>
 </div>
@@ -16381,7 +16415,7 @@ memory usage: 9.3+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Ahora configuramos las columnas</p>
+<p>Ahora configuramos las columnas para que tengan mejores nombres</p>
 
 </div>
 </div>
@@ -16598,7 +16632,7 @@ memory usage: 9.3+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Y reemplazamos los $nan con 0</p>
+<p>Y reemplazamos los $nan con 0 usando <strong>fill_value</strong></p>
 
 </div>
 </div>
@@ -16816,7 +16850,8 @@ memory usage: 9.3+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="9)-Leyendo-informaci&#243;n-con-formato-irregular">9) Leyendo informaci&#243;n con formato irregular<a class="anchor-link" href="#9)-Leyendo-informaci&#243;n-con-formato-irregular">&#182;</a></h3>
+<h3 id="9)-Leyendo-informaci&#243;n-con-formato-irregular">9) Leyendo informaci&#243;n con formato irregular<a class="anchor-link" href="#9)-Leyendo-informaci&#243;n-con-formato-irregular">&#182;</a></h3><p>El archivo de origen tiene filas que no necesitamos, está en formato "ancho" y tiene los datos pivoteados. Tenemos que hacer un "unpivot"</p>
+
 </div>
 </div>
 </div>
@@ -17257,17 +17292,23 @@ memory usage: 9.3+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Ordenando-con-'melt'-para-que-los-datos-queden-en-formato-'Tidy'">Ordenando con 'melt' para que los datos queden en formato 'Tidy'<a class="anchor-link" href="#Ordenando-con-'melt'-para-que-los-datos-queden-en-formato-'Tidy'">&#182;</a></h4>
+<h4 id="Ordenando-con-'melt'-para-que-los-datos-queden-en-formato-'Tidy'-y-'largo'">Ordenando con 'melt' para que los datos queden en formato 'Tidy' y 'largo'<a class="anchor-link" href="#Ordenando-con-'melt'-para-que-los-datos-queden-en-formato-'Tidy'-y-'largo'">&#182;</a></h4><ul>
+<li>Cada fila tiene que ser una observación</li>
+<li>Cada columna es una variable</li>
+<li>Cada unidad observacional tiene que tener su propia tabla</li>
+</ul>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Que necesitamos en este caso?</p>
 <ul>
 <li>Queremos que la primer columna sea el país</li>
 <li>Que la segunda sean los años</li>
-<li>Y la tercera tenga la población por año y país</li>
+<li>Y que la tercera tenga la población por año y país</li>
 </ul>
 
 </div>
@@ -17391,6 +17432,14 @@ memory usage: 9.3+ KB
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ajustamos los nombre de las demás columnas, <strong>Year</strong> y <strong>Population</strong></p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -17782,7 +17831,7 @@ memory usage: 2.0+ KB
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1699e549a20&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x17d19cb5780&gt;</pre>
 </div>
 
 </div>
@@ -17805,6 +17854,14 @@ memory usage: 2.0+ KB
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Separamos solo los datos desde el 2010</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -18041,6 +18098,13 @@ memory usage: 2.0+ KB
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Grafico-de-Trellis-por-Pa&#237;s">Grafico de Trellis por Pa&#237;s<a class="anchor-link" href="#Grafico-de-Trellis-por-Pa&#237;s">&#182;</a></h4>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[55]:</div>
@@ -18076,6 +18140,36 @@ memory usage: 2.0+ KB
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Otras librerías para tener en cuenta:</p>
+<ul>
+<li>Papermill, para generar reportes desde notebooks
+<a href="https://papermill.readthedocs.io/en/latest/">https://papermill.readthedocs.io/en/latest/</a></li>
+</ul>
+<p>Para escribir a Excel:</p>
+<ul>
+<li><p>pandas.DataFrame.to_excel - <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_excel.html">https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_excel.html</a></p>
+</li>
+<li><p>XlsxWriter - <a href="https://xlsxwriter.readthedocs.io/working_with_pandas.html#ewx-pandas">https://xlsxwriter.readthedocs.io/working_with_pandas.html#ewx-pandas</a></p>
+</li>
+<li><p>ExcelWriter - <a href="https://wellsr.com/python/python-export-dataframe-to-excel-with-pandas-excelwriter/">https://wellsr.com/python/python-export-dataframe-to-excel-with-pandas-excelwriter/</a></p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pueden bajar el código completo y los datasets completos en mi GitHub:</p>
+<p><a href="https://github.com/fsgp/PyConAr-2019">https://github.com/fsgp/PyConAr-2019</a></p>
+<h1 id="Gracias!!!">Gracias!!!<a class="anchor-link" href="#Gracias!!!">&#182;</a></h1>
+</div>
+</div>
 </div>
     </div>
   </div>

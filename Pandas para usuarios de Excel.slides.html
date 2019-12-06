@@ -13252,7 +13252,7 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Temario">Temario<a class="anchor-link" href="#Temario">&#182;</a></h4><p>1) Razones por las cuales es una buena idea complementar Excel con Python y Pandas</p>
 <p>2) Como leemos hojas de Excel en Python y Pandas</p>
-<p>3) Que es un Dataframe</p>
+<p>3) Que es un Dataframe?</p>
 <p>4) Creación de columnas calculadas</p>
 <p>5) Filtrado de datos</p>
 <p>6) Agrupación y sumarización de datos</p>
@@ -13365,7 +13365,7 @@ a.anchor-link {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Wall time: 47.5 s
+<pre>Wall time: 43 s
 </pre>
 </div>
 </div>
@@ -13404,7 +13404,7 @@ a.anchor-link {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Wall time: 41.9 ms
+<pre>Wall time: 67.8 ms
 </pre>
 </div>
 </div>
@@ -13918,7 +13918,7 @@ memory usage: 983.4+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Con <strong>describe</strong> pedimos las estadísticas de resumen.</p>
+<p>Con <strong>describe</strong> pedimos las estadísticas de resumen de las columnas numéricas.</p>
 
 </div>
 </div>
@@ -14074,7 +14074,7 @@ memory usage: 983.4+ KB
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">detalle</span><span class="p">[</span><span class="s1">&#39;ItemTotal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">detalle</span><span class="p">[</span><span class="s1">&#39;UnitPrice&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">detalle</span><span class="p">[</span><span class="s1">&#39;OrderQty&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">detalle</span><span class="p">[</span><span class="s1">&#39;UnitPriceDiscount&#39;</span><span class="p">])</span>
@@ -14433,7 +14433,7 @@ memory usage: 983.4+ KB
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">detalle</span><span class="p">[</span><span class="s1">&#39;ProductID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -14449,7 +14449,7 @@ memory usage: 983.4+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[60]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -15229,7 +15229,7 @@ Name: ItemTotal, Length: 31465, dtype: float64</pre>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clientes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;clientes.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -15242,7 +15242,7 @@ Name: ItemTotal, Length: 31465, dtype: float64</pre>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clientes</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -15258,7 +15258,7 @@ Name: ItemTotal, Length: 31465, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -15324,7 +15324,7 @@ Name: ItemTotal, Length: 31465, dtype: float64</pre>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clientes</span><span class="o">.</span><span class="n">shape</span>
@@ -15340,7 +15340,7 @@ Name: ItemTotal, Length: 31465, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[25]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -15357,7 +15357,7 @@ Name: ItemTotal, Length: 31465, dtype: float64</pre>
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clientes</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -15401,7 +15401,7 @@ memory usage: 309.8+ KB
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">productos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;productos.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -15414,7 +15414,7 @@ memory usage: 309.8+ KB
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">productos</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -15430,7 +15430,7 @@ memory usage: 309.8+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[28]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -15508,7 +15508,7 @@ memory usage: 309.8+ KB
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">productos</span><span class="o">.</span><span class="n">shape</span>
@@ -15524,7 +15524,7 @@ memory usage: 309.8+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[29]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -15541,7 +15541,7 @@ memory usage: 309.8+ KB
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">productos</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -15602,7 +15602,7 @@ memory usage: 9.3+ KB
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ventas</span> <span class="o">=</span> <span class="n">detalle</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">encabezado</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;SalesOrderID&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;SalesOrderID&#39;</span><span class="p">)</span>
@@ -15615,7 +15615,7 @@ memory usage: 9.3+ KB
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ventas</span><span class="o">.</span><span class="n">shape</span>
@@ -15631,7 +15631,7 @@ memory usage: 9.3+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[32]:</div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -15648,7 +15648,7 @@ memory usage: 9.3+ KB
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ventas</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -15664,7 +15664,7 @@ memory usage: 9.3+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[33]:</div>
+    <div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -15780,7 +15780,7 @@ memory usage: 9.3+ KB
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ventas</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;SalesOrderDetailID&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -15793,7 +15793,7 @@ memory usage: 9.3+ KB
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ventas</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -15809,7 +15809,7 @@ memory usage: 9.3+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[35]:</div>
+    <div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -15918,7 +15918,7 @@ memory usage: 9.3+ KB
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ventas</span> <span class="o">=</span> <span class="n">ventas</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">clientes</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;CustomerID&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;CustomerID&#39;</span><span class="p">)</span>
@@ -15931,7 +15931,7 @@ memory usage: 9.3+ KB
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ventas</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -15947,7 +15947,7 @@ memory usage: 9.3+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[37]:</div>
+    <div class="prompt output_prompt">Out[36]:</div>
 
 
 
@@ -16062,7 +16062,7 @@ memory usage: 9.3+ KB
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ventas</span> <span class="o">=</span> <span class="n">ventas</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">productos</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;ProductID&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;ProductID&#39;</span><span class="p">)</span>
@@ -16075,7 +16075,7 @@ memory usage: 9.3+ KB
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ventas</span><span class="o">.</span><span class="n">shape</span>
@@ -16091,7 +16091,7 @@ memory usage: 9.3+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[39]:</div>
+    <div class="prompt output_prompt">Out[38]:</div>
 
 
 
@@ -16108,7 +16108,7 @@ memory usage: 9.3+ KB
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ventas</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -16124,7 +16124,7 @@ memory usage: 9.3+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[40]:</div>
+    <div class="prompt output_prompt">Out[39]:</div>
 
 
 
@@ -16257,7 +16257,7 @@ memory usage: 9.3+ KB
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">ventas</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ProductCategory&quot;</span><span class="p">])</span>
@@ -16273,7 +16273,7 @@ memory usage: 9.3+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[61]:</div>
+    <div class="prompt output_prompt">Out[40]:</div>
 
 
 
@@ -16318,43 +16318,43 @@ memory usage: 9.3+ KB
   <tbody>
     <tr>
       <th>Accessories</th>
-      <td>20,142</td>
-      <td>31</td>
-      <td>2</td>
-      <td>855</td>
-      <td>62,174</td>
-      <td>20</td>
-      <td>0</td>
+      <td>20141.891052</td>
+      <td>30.880053</td>
+      <td>1.503423</td>
+      <td>854.514638</td>
+      <td>62173.679492</td>
+      <td>19.694542</td>
+      <td>0.000815</td>
     </tr>
     <tr>
       <th>Bikes</th>
-      <td>25,718</td>
-      <td>2,364</td>
-      <td>2</td>
-      <td>847</td>
-      <td>55,044</td>
-      <td>1,255</td>
-      <td>0</td>
+      <td>25717.643102</td>
+      <td>2364.446871</td>
+      <td>2.254952</td>
+      <td>846.652544</td>
+      <td>55043.685769</td>
+      <td>1254.661543</td>
+      <td>0.006593</td>
     </tr>
     <tr>
       <th>Clothing</th>
-      <td>25,094</td>
-      <td>99</td>
-      <td>3</td>
-      <td>809</td>
-      <td>57,806</td>
-      <td>32</td>
-      <td>0</td>
+      <td>25093.912172</td>
+      <td>99.118562</td>
+      <td>3.443489</td>
+      <td>809.426007</td>
+      <td>57806.260447</td>
+      <td>32.105126</td>
+      <td>0.002027</td>
     </tr>
     <tr>
       <th>Components</th>
-      <td>29,813</td>
-      <td>631</td>
-      <td>3</td>
-      <td>840</td>
-      <td>54,236</td>
-      <td>251</td>
-      <td>0</td>
+      <td>29813.438229</td>
+      <td>631.222232</td>
+      <td>2.622954</td>
+      <td>839.667879</td>
+      <td>54235.683923</td>
+      <td>251.376475</td>
+      <td>0.000106</td>
     </tr>
   </tbody>
 </table>
@@ -16370,6 +16370,7 @@ memory usage: 9.3+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>El índice define las filas.</p>
 <p>La función de agregación por defecto es la media</p>
 
 </div>
@@ -16385,7 +16386,7 @@ memory usage: 9.3+ KB
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s1">&#39;$</span><span class="si">{:,.0f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span>
@@ -16407,7 +16408,7 @@ memory usage: 9.3+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[63]:</div>
+    <div class="prompt output_prompt">Out[41]:</div>
 
 
 
@@ -16475,7 +16476,7 @@ memory usage: 9.3+ KB
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pivot</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;ProductCategory == [&quot;Bikes&quot;]&#39;</span><span class="p">)</span>
@@ -16491,7 +16492,7 @@ memory usage: 9.3+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[43]:</div>
+    <div class="prompt output_prompt">Out[42]:</div>
 
 
 
@@ -16540,14 +16541,14 @@ memory usage: 9.3+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Ahora configuramos las columnas</p>
+<p>Ahora configuramos las columnas para que tengan mejores nombres</p>
 
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">ventas</span><span class="p">,</span>
@@ -16567,7 +16568,7 @@ memory usage: 9.3+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[44]:</div>
+    <div class="prompt output_prompt">Out[43]:</div>
 
 
 
@@ -16764,7 +16765,7 @@ memory usage: 9.3+ KB
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">ventas</span><span class="p">,</span>
@@ -16785,7 +16786,7 @@ memory usage: 9.3+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[45]:</div>
+    <div class="prompt output_prompt">Out[44]:</div>
 
 
 
@@ -16975,13 +16976,14 @@ memory usage: 9.3+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="9)-Leyendo-informaci&#243;n-con-formato-irregular">9) Leyendo informaci&#243;n con formato irregular<a class="anchor-link" href="#9)-Leyendo-informaci&#243;n-con-formato-irregular">&#182;</a></h3>
+<h3 id="9)-Leyendo-informaci&#243;n-con-formato-irregular">9) Leyendo informaci&#243;n con formato irregular<a class="anchor-link" href="#9)-Leyendo-informaci&#243;n-con-formato-irregular">&#182;</a></h3><p>El archivo de origen tiene filas que no necesitamos, está en formato "ancho" y tiene los datos pivoteados. Tenemos que hacer un "unpivot"</p>
+
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pop</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;Country Population by Year.xlsx&#39;</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;Sheet1&#39;</span><span class="p">)</span>
@@ -16998,7 +17000,7 @@ memory usage: 9.3+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[46]:</div>
+    <div class="prompt output_prompt">Out[45]:</div>
 
 
 
@@ -17242,7 +17244,7 @@ memory usage: 9.3+ KB
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pop</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;Country Population by Year.xlsx&#39;</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;Sheet1&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
@@ -17259,7 +17261,7 @@ memory usage: 9.3+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[47]:</div>
+    <div class="prompt output_prompt">Out[46]:</div>
 
 
 
@@ -17416,17 +17418,23 @@ memory usage: 9.3+ KB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Ordenando-con-'melt'-para-que-los-datos-queden-en-formato-'Tidy'">Ordenando con 'melt' para que los datos queden en formato 'Tidy'<a class="anchor-link" href="#Ordenando-con-'melt'-para-que-los-datos-queden-en-formato-'Tidy'">&#182;</a></h4>
+<h4 id="Ordenando-con-'melt'-para-que-los-datos-queden-en-formato-'Tidy'-y-'largo'">Ordenando con 'melt' para que los datos queden en formato 'Tidy' y 'largo'<a class="anchor-link" href="#Ordenando-con-'melt'-para-que-los-datos-queden-en-formato-'Tidy'-y-'largo'">&#182;</a></h4><ul>
+<li>Cada fila tiene que ser una observación</li>
+<li>Cada columna es una variable</li>
+<li>Cada unidad observacional tiene que tener su propia tabla</li>
+</ul>
+
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Que necesitamos en este caso?</p>
 <ul>
 <li>Queremos que la primer columna sea el país</li>
 <li>Que la segunda sean los años</li>
-<li>Y la tercera tenga la población por año y país</li>
+<li>Y que la tercera tenga la población por año y país</li>
 </ul>
 
 </div>
@@ -17434,7 +17442,7 @@ memory usage: 9.3+ KB
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pop_pivot</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">pop</span><span class="p">,</span> <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">])</span>
@@ -17451,7 +17459,7 @@ memory usage: 9.3+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[48]:</div>
+    <div class="prompt output_prompt">Out[47]:</div>
 
 
 
@@ -17561,7 +17569,7 @@ memory usage: 9.3+ KB
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pop_tidy</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">pop</span><span class="p">,</span> 
@@ -17581,7 +17589,7 @@ memory usage: 9.3+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[49]:</div>
+    <div class="prompt output_prompt">Out[48]:</div>
 
 
 
@@ -17743,7 +17751,7 @@ memory usage: 9.3+ KB
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pop_tidy</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -17789,7 +17797,7 @@ memory usage: 2.0+ KB
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:,.0f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span>
@@ -17804,7 +17812,7 @@ memory usage: 2.0+ KB
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pop_tidy</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -17820,7 +17828,7 @@ memory usage: 2.0+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[52]:</div>
+    <div class="prompt output_prompt">Out[51]:</div>
 
 
 
@@ -17906,7 +17914,7 @@ memory usage: 2.0+ KB
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -17921,7 +17929,7 @@ memory usage: 2.0+ KB
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">)</span>
@@ -17943,13 +17951,13 @@ memory usage: 2.0+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[54]:</div>
+    <div class="prompt output_prompt">Out[53]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1da6d0e72e8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x17d19cb5780&gt;</pre>
 </div>
 
 </div>
@@ -17983,7 +17991,7 @@ memory usage: 2.0+ KB
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pop_tidy_new</span> <span class="o">=</span> <span class="n">pop_tidy</span><span class="p">[</span><span class="n">pop_tidy</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">2010</span><span class="p">]</span>
@@ -18000,7 +18008,7 @@ memory usage: 2.0+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[64]:</div>
+    <div class="prompt output_prompt">Out[54]:</div>
 
 
 
@@ -18035,175 +18043,175 @@ memory usage: 2.0+ KB
       <td>Canada</td>
       <td>2010</td>
       <td>34005274</td>
-      <td>$34</td>
+      <td>34</td>
     </tr>
     <tr>
       <th>56</th>
       <td>Germany</td>
       <td>2010</td>
       <td>81776930</td>
-      <td>$82</td>
+      <td>82</td>
     </tr>
     <tr>
       <th>57</th>
       <td>France</td>
       <td>2010</td>
       <td>65027512</td>
-      <td>$65</td>
+      <td>65</td>
     </tr>
     <tr>
       <th>58</th>
       <td>Mexico</td>
       <td>2010</td>
       <td>118617542</td>
-      <td>$119</td>
+      <td>119</td>
     </tr>
     <tr>
       <th>59</th>
       <td>USA</td>
       <td>2010</td>
       <td>309347057</td>
-      <td>$309</td>
+      <td>309</td>
     </tr>
     <tr>
       <th>60</th>
       <td>Canada</td>
       <td>2011</td>
       <td>34342780</td>
-      <td>$34</td>
+      <td>34</td>
     </tr>
     <tr>
       <th>61</th>
       <td>Germany</td>
       <td>2011</td>
       <td>81797673</td>
-      <td>$82</td>
+      <td>82</td>
     </tr>
     <tr>
       <th>62</th>
       <td>France</td>
       <td>2011</td>
       <td>65342776</td>
-      <td>$65</td>
+      <td>65</td>
     </tr>
     <tr>
       <th>63</th>
       <td>Mexico</td>
       <td>2011</td>
       <td>120365271</td>
-      <td>$120</td>
+      <td>120</td>
     </tr>
     <tr>
       <th>64</th>
       <td>USA</td>
       <td>2011</td>
       <td>311721632</td>
-      <td>$312</td>
+      <td>312</td>
     </tr>
     <tr>
       <th>65</th>
       <td>Canada</td>
       <td>2012</td>
       <td>34754312</td>
-      <td>$35</td>
+      <td>35</td>
     </tr>
     <tr>
       <th>66</th>
       <td>Germany</td>
       <td>2012</td>
       <td>80425823</td>
-      <td>$80</td>
+      <td>80</td>
     </tr>
     <tr>
       <th>67</th>
       <td>France</td>
       <td>2012</td>
       <td>65639975</td>
-      <td>$66</td>
+      <td>66</td>
     </tr>
     <tr>
       <th>68</th>
       <td>Mexico</td>
       <td>2012</td>
       <td>122070963</td>
-      <td>$122</td>
+      <td>122</td>
     </tr>
     <tr>
       <th>69</th>
       <td>USA</td>
       <td>2012</td>
       <td>314112078</td>
-      <td>$314</td>
+      <td>314</td>
     </tr>
     <tr>
       <th>70</th>
       <td>Canada</td>
       <td>2013</td>
       <td>35158304</td>
-      <td>$35</td>
+      <td>35</td>
     </tr>
     <tr>
       <th>71</th>
       <td>Germany</td>
       <td>2013</td>
       <td>80645605</td>
-      <td>$81</td>
+      <td>81</td>
     </tr>
     <tr>
       <th>72</th>
       <td>France</td>
       <td>2013</td>
       <td>65925498</td>
-      <td>$66</td>
+      <td>66</td>
     </tr>
     <tr>
       <th>73</th>
       <td>Mexico</td>
       <td>2013</td>
       <td>123740109</td>
-      <td>$124</td>
+      <td>124</td>
     </tr>
     <tr>
       <th>74</th>
       <td>USA</td>
       <td>2013</td>
       <td>316497531</td>
-      <td>$316</td>
+      <td>316</td>
     </tr>
     <tr>
       <th>75</th>
       <td>Canada</td>
       <td>2014</td>
       <td>35540419</td>
-      <td>$36</td>
+      <td>36</td>
     </tr>
     <tr>
       <th>76</th>
       <td>Germany</td>
       <td>2014</td>
       <td>80889505</td>
-      <td>$81</td>
+      <td>81</td>
     </tr>
     <tr>
       <th>77</th>
       <td>France</td>
       <td>2014</td>
       <td>66206930</td>
-      <td>$66</td>
+      <td>66</td>
     </tr>
     <tr>
       <th>78</th>
       <td>Mexico</td>
       <td>2014</td>
       <td>125385833</td>
-      <td>$125</td>
+      <td>125</td>
     </tr>
     <tr>
       <th>79</th>
       <td>USA</td>
       <td>2014</td>
       <td>318857056</td>
-      <td>$319</td>
+      <td>319</td>
     </tr>
   </tbody>
 </table>
@@ -18225,7 +18233,7 @@ memory usage: 2.0+ KB
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">FacetGrid</span><span class="p">(</span><span class="n">pop_tidy_new</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s2">&quot;Country Name&quot;</span><span class="p">)</span>
